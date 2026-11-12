@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dairyflow.app"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- Fully offline app: no network or runtime permissions required. Share uses grantUriPermissions. -->
+
+    <application
+        android:name=".DairyFlowApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DairyFlow"
+        android:largeHeap="true">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DairyFlow.Splash"
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" android:exported="false" android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.customers.CustomerEditActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.customers.CustomerDetailActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.deliveries.DeliveryEntryActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.payments.PaymentEditActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.inventory.PurchaseEditActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.inventory.InventoryActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.expenses.ExpensesActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.billing.BillingActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.reports.ReportsActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.reports.ReportDetailActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.inventory.AdjustmentEditActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.settings.RatesActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".ui.settings.SettingsActivity" android:exported="false" android:screenOrientation="portrait" />
+
+        <provider
+            android:name=".provider.ShareProvider"
+            android:authorities="com.dairyflow.app.share"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+    </application>
+</manifest>

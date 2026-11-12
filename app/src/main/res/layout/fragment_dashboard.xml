@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="42dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/dash_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Dairy"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/dash_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#A7F3D0"
+                android:textSize="12sp" />
+
+            <!-- Outstanding hero -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#1AFFFFFF"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/dash_outstanding_card"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL OUTSTANDING"
+                        android:textColor="#FBBF24"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.18"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dash_outstanding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Low stock warning (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/low_stock_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/gold_100"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/low_stock_text"
+                android:text="Low stock"
+                android:textColor="#92400E"
+                android:textSize="12.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Stats grid 2x2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp">
+
+                <include layout="@layout/stat_card" android:id="@+id/stat_litres" />
+                <Space android:layout_height="10dp" />
+                <include layout="@layout/stat_card" android:id="@+id/stat_sales" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
+
+                <include layout="@layout/stat_card" android:id="@+id/stat_payments" />
+                <Space android:layout_height="10dp" />
+                <include layout="@layout/stat_card" android:id="@+id/stat_stock" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Month overview -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="THIS MONTH"
+                android:textAppearance="@style/TextAppearance.Label"
+                android:layout_marginBottom="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/month_litres" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 L" android:textColor="@color/emerald_800" android:textStyle="bold" android:textSize="17sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Milk sold" android:textColor="@color/ink_hint" android:textSize="11sp"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="38dp" android:background="@color/divider"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/month_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 0" android:textColor="@color/emerald_800" android:textStyle="bold" android:textSize="17sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Billing" android:textColor="@color/ink_hint" android:textSize="11sp"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="38dp" android:background="@color/divider"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/month_payments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Rs 0" android:textColor="@color/emerald_800" android:textStyle="bold" android:textSize="17sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Collected" android:textColor="@color/ink_hint" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Quick actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="QUICK ACTIONS"
+                android:textAppearance="@style/TextAppearance.Label"
+                android:layout_marginBottom="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <Button
+                    android:id="@+id/qa_entry"
+                    style="@style/Button.Emerald"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="New Delivery" />
+                <Button
+                    android:id="@+id/qa_payment"
+                    style="@style/Button.Emerald"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Take Payment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/qa_customer"
+                    style="@style/Button.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="Add Customer" />
+                <Button
+                    android:id="@+id/qa_billing"
+                    style="@style/Button.Outlined"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Monthly Bills" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Recent payments -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="26dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RECENT PAYMENTS"
+                android:textAppearance="@style/TextAppearance.Label"
+                android:layout_marginBottom="6dp" />
+
+            <ListView
+                android:id="@+id/recent_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="2dp"
+                android:divider="@color/divider"
+                android:dividerHeight="1dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:clipToPadding="false" />
+
+            <TextView
+                android:id="@+id/recent_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="18dp"
+                android:text="No payments yet — tap “Take Payment” to record one."
+                android:textColor="@color/ink_hint"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

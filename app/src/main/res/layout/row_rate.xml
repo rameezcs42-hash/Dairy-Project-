@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="9dp"
+    android:paddingBottom="9dp">
+
+    <TextView
+        android:id="@+id/row_rate_type"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"
+        android:layout_height="wrap_content"
+        android:text="Buffalo Purchase"
+        android:textColor="@color/ink"
+        android:textStyle="bold"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/row_rate_date"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="01 Nov 2026"
+        android:textColor="@color/ink_secondary"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/row_rate_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 130"
+        android:textColor="@color/emerald_800"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+</LinearLayout>

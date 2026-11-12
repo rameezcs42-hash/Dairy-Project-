@@ -1,0 +1,11 @@
+# Hand-rolled build outputs (source of truth: tools/build_apk.sh)
+build/
+*.idsig
+build_log.txt
+
+# OS/editor noise
+.DS_Store
+*.iml
+.idea/
+.gradle/
+local.properties

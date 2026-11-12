@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="38dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Milk Rates"
+                android:textColor="#FFFFFF"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textSize="21sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Rate changes apply from their effective date — old bills keep the old rate."
+                android:textColor="#A7F3D0"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CURRENT RATES" style="@style/TextAppearance.Label" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:id="@+id/current_rates" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:elevation="2dp" android:padding="4dp" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="RATE HISTORY" style="@style/TextAppearance.Label" android:paddingTop="16dp" android:layout_marginBottom="6dp"/>
+                <ListView
+                    android:id="@+id/rate_history_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:background="@drawable/bg_card"
+                    android:elevation="2dp"
+                    android:divider="@color/divider"
+                    android:dividerHeight="1dp" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ADD / UPDATE RATE" style="@style/TextAppearance.Label" android:paddingTop="18dp" android:layout_marginBottom="6dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <Spinner android:id="@+id/spinner_rate_milk" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingStart="10dp" android:paddingEnd="10dp" />
+                    <View android:layout_width="8dp" android:layout_height="wrap_content"/>
+                    <Spinner android:id="@+id/spinner_rate_type" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:background="@drawable/bg_input" android:paddingStart="10dp" android:paddingEnd="10dp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                    <EditText android:id="@+id/input_rate_price" style="@style/InputField" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="Rs per litre" android:inputType="numberDecimal" android:layout_marginEnd="6dp" />
+                    <EditText android:id="@+id/input_rate_effective" style="@style/InputField" android:layout_width="0dp" android:layout_weight="1.1" android:layout_height="wrap_content" android:hint="Effective date (yyyy-MM-dd)" android:inputType="date" android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_save_rate"
+                    style="@style/Button.Emerald"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Save Rate" />
+
+                <View android:layout_height="20dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

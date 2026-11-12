@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="38dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business Reports"
+                android:textColor="#FFFFFF"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textSize="21sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Tap any report, then export to PDF."
+                android:textColor="#A7F3D0"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/report_tile" android:id="@+id/tile_daily" />
+            <include layout="@layout/report_tile" android:id="@+id/tile_monthly" />
+            <include layout="@layout/report_tile" android:id="@+id/tile_customers" />
+            <include layout="@layout/report_tile" android:id="@+id/tile_outstanding" />
+            <include layout="@layout/report_tile" android:id="@+id/tile_pnl" />
+            <include layout="@layout/report_tile" android:id="@+id/tile_rates" />
+            <View android:layout_height="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

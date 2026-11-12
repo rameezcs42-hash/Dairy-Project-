@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- DairyFlow premium Emerald Green palette -->
+    <color name="emerald_950">#052E22</color>
+    <color name="emerald_900">#064E3B</color>
+    <color name="emerald_800">#065F46</color>
+    <color name="emerald_700">#047857</color>
+    <color name="emerald_600">#059669</color>
+    <color name="emerald_500">#10B981</color>
+    <color name="emerald_400">#34D399</color>
+    <color name="emerald_300">#6EE7B7</color>
+    <color name="emerald_100">#D1FAE5</color>
+    <color name="emerald_50">#ECFDF5</color>
+
+    <color name="gold_500">#F59E0B</color>
+    <color name="gold_400">#FBBF24</color>
+    <color name="gold_100">#FEF3C7</color>
+
+    <color name="danger_600">#DC2626</color>
+    <color name="danger_500">#EF4444</color>
+    <color name="danger_100">#FEE2E2</color>
+
+    <color name="ink">#10231B</color>
+    <color name="ink_secondary">#42554B</color>
+    <color name="ink_hint">#7A8B82</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F4FAF7</color>
+    <color name="surface_low">#EAF6EF</color>
+    <color name="background">#E9F5EE</color>
+    <color name="divider">#D8E9E0</color>
+    <color name="on_emerald">#FFFFFF</color>
+</resources>

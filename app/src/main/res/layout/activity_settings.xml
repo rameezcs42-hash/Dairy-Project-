@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_gradient"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="38dp"
+            android:paddingBottom="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Shop Settings" android:textColor="#FFFFFF" android:fontFamily="serif" android:textStyle="bold" android:textSize="21sp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="These details print on your PDF invoices." android:textColor="#A7F3D0" android:textSize="12sp" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SHOP / FARM NAME *" style="@style/TextAppearance.Label" android:paddingBottom="4dp"/>
+            <EditText android:id="@+id/input_shop_name" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="DairyFlow Dairy Farm" android:inputType="text|textCapWords" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginEnd="6dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="OWNER NAME" style="@style/TextAppearance.Label" android:paddingBottom="4dp"/>
+                    <EditText android:id="@+id/input_owner_name" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Muhammad Rameez" android:inputType="text|textCapWords" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="6dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="PHONE" style="@style/TextAppearance.Label" android:paddingBottom="4dp"/>
+                    <EditText android:id="@+id/input_shop_phone" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="03xx-xxxxxxx" android:inputType="phone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SHOP ADDRESS" style="@style/TextAppearance.Label" android:paddingTop="12dp" android:paddingBottom="4dp"/>
+            <EditText android:id="@+id/input_shop_address" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Anaj Mandi, Saddar, Karachi" android:inputType="text|textCapSentences" />
+
+            <Button
+                android:id="@+id/btn_save_settings"
+                style="@style/Button.Emerald"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Save Shop Details" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DATA &amp; BACKUP" style="@style/TextAppearance.Label" android:paddingTop="22dp" android:paddingBottom="6dp"/>
+
+            <TextView android:id="@+id/backup_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Last auto-backup: never" android:textColor="@color/ink_hint" android:textSize="12sp" android:paddingBottom="8dp" />
+
+            <Button android:id="@+id/btn_export_backup" style="@style/Button.Emerald" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Export Backup (.dairyflow)" android:layout_marginBottom="8dp" />
+            <Button android:id="@+id/btn_restore_backup" style="@style/Button.Outlined" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Restore Backup…" android:layout_marginBottom="8dp" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DEMO DATA" style="@style/TextAppearance.Label" android:paddingTop="14dp" android:paddingBottom="6dp"/>
+            <Button android:id="@+id/btn_load_demo" style="@style/Button.Outlined" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Load 60-day demo data" android:layout_marginBottom="8dp" />
+            <Button android:id="@+id/btn_clear_demo" style="@style/Button.Outlined" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Clear ALL data (customers, sales, payments)" android:textColor="@color/danger_600" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="22dp"
+                android:text="DairyFlow — Smart Milk Business Manager\nVersion 1.0 (offline)"
+                android:gravity="center"
+                android:textColor="@color/ink_hint"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
