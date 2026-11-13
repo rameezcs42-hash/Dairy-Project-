@@ -33,8 +33,8 @@ public class DashboardFragment extends Fragment implements MainActivity.Refresha
 
     private BillingRepository repo;
     private TextView dashShop, dashDate, dashOutstanding, monthLitres, monthAmount, monthPayments;
-    private TextView lowStockBanner, lowStockText, recentEmpty;
-    private View lowStockCard;
+    private View lowStockBanner;
+    private TextView lowStockText, recentEmpty;
     private ListView recentPayments;
     private View statLitres, statSales, statPayments, statStock;
 
