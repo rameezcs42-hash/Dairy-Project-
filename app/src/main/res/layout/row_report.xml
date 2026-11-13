@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="9dp"
+    android:paddingBottom="9dp"
+    android:background="@color/surface">
+
+    <TextView
+        android:id="@+id/row_report_left"
+        android:layout_width="0dp"
+        android:layout_weight="1.4"
+        android:layout_height="wrap_content"
+        android:text="Label"
+        android:textColor="@color/ink"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/row_report_mid"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="wrap_content"
+        android:text="mid"
+        android:textColor="@color/ink_secondary"
+        android:textSize="11.5sp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/row_report_right"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="right"
+        android:textColor="@color/emerald_800"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:maxLines="1"
+        android:ellipsize="end" />
+</LinearLayout>

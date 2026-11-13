@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_nav_height" />
+
+    <!-- Premium bottom navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_nav_bg"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
+
+        <include layout="@layout/nav_tab" android:id="@+id/tab_home" />
+        <include layout="@layout/nav_tab" android:id="@+id/tab_customers" />
+        <!-- Center entry button -->
+        <FrameLayout
+            android:id="@+id/tab_entry"
+            android:layout_width="0dp"
+            android:layout_weight="1.18"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <FrameLayout
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_emerald_gradient"
+                android:elevation="14dp"
+                android:outlineSpotShadowColor="#10B981">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_entry" />
+            </FrameLayout>
+        </FrameLayout>
+        <include layout="@layout/nav_tab" android:id="@+id/tab_payments" />
+        <include layout="@layout/nav_tab" android:id="@+id/tab_more" />
+    </LinearLayout>
+</FrameLayout>

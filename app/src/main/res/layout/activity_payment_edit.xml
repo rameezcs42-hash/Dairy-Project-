@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="28dp">
+
+        <TextView
+            android:id="@+id/pay_form_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record Payment"
+            android:textColor="@color/ink"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CUSTOMER *" style="@style/TextAppearance.Label" android:paddingBottom="4dp"/>
+        <Spinner android:id="@+id/spinner_customer" android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/bg_input" android:paddingStart="12dp" android:paddingEnd="12dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="AMOUNT (Rs) *" style="@style/TextAppearance.Label" android:paddingTop="14dp" android:paddingBottom="4dp"/>
+        <EditText android:id="@+id/input_amount" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="0.00" android:inputType="numberDecimal" android:textSize="26sp" android:textStyle="bold" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="METHOD" style="@style/TextAppearance.Label" android:paddingTop="14dp" android:paddingBottom="6dp"/>
+        <RadioGroup android:id="@+id/method_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/method_cash" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="Cash" android:buttonTint="@color/emerald_700" android:textColor="@color/ink" />
+            <RadioButton android:id="@+id/method_easypaisa" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="Easypaisa" android:buttonTint="@color/emerald_700" android:textColor="@color/ink" />
+            <RadioButton android:id="@+id/method_jazzcash" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="JazzCash" android:buttonTint="@color/emerald_700" android:textColor="@color/ink" />
+            <RadioButton android:id="@+id/method_bank" android:layout_width="0dp" android:layout_weight="1" android:layout_height="44dp" android:text="Bank" android:buttonTint="@color/emerald_700" android:textColor="@color/ink" />
+        </RadioGroup>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DATE" style="@style/TextAppearance.Label" android:paddingTop="14dp" android:paddingBottom="4dp"/>
+        <EditText android:id="@+id/input_pay_date" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="date" android:hint="yyyy-MM-dd" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NOTE (optional)" style="@style/TextAppearance.Label" android:paddingTop="14dp" android:paddingBottom="4dp"/>
+        <EditText android:id="@+id/input_pay_note" style="@style/InputField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Advance, bill settlement, etc." android:inputType="textCapSentences" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="10dp" android:text="Tip: pay more than the bill to record an advance — the balance turns negative and shows as ADVANCE." android:textColor="@color/ink_hint" android:textSize="11.5sp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_delete_payment"
+                style="@style/Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textColor="@color/danger_600"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/btn_save_payment"
+                style="@style/Button.Emerald"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:layout_height="wrap_content"
+                android:text="Save Payment" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
