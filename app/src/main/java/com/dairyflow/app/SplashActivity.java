@@ -11,12 +11,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dairyflow.app.R;
+import com.dairyflow.app.ui.CrashLogActivity;
+
+import java.io.File;
 
 /** Brief branded splash (logo + wordmark), then MainActivity. */
 public class SplashActivity extends Activity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // If the last run died with an uncaught exception, show the recorded crash first.
+        File crashFile = new File(getFilesDir(), "last_crash.txt");
+        if (crashFile.exists()) {
+            startActivity(new Intent(this, CrashLogActivity.class));
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_splash);
         FrameLayout root = findViewById(R.id.splash_root);
         ImageView logo = findViewById(R.id.splash_logo);
