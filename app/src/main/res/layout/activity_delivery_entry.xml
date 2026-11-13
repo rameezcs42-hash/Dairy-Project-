@@ -95,9 +95,9 @@
                 android:background="#1AFFFFFF"
                 android:padding="3dp">
 
-                <TextView android:id="@+id/session_all" style="@style/SessionTab" android:layout_width="0dp" android:layout_weight="1" android:text="All" />
-                <TextView android:id="@+id/session_morning" style="@style/SessionTab" android:layout_width="0dp" android:layout_weight="1" android:text="Morning" />
-                <TextView android:id="@+id/session_evening" style="@style/SessionTab" android:layout_width="0dp" android:layout_weight="1" android:text="Evening" />
+                <TextView android:id="@+id/session_all" style="@style/SessionTab" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="All" />
+                <TextView android:id="@+id/session_morning" style="@style/SessionTab" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Morning" />
+                <TextView android:id="@+id/session_evening" style="@style/SessionTab" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Evening" />
             </LinearLayout>
         </LinearLayout>
 

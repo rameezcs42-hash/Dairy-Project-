@@ -130,10 +130,10 @@
             android:background="@color/surface"
             android:elevation="3dp">
 
-            <TextView android:id="@+id/action_call" style="@style/ActionPill" android:layout_width="0dp" android:layout_weight="1" android:text="Call" />
-            <TextView android:id="@+id/action_whatsapp" style="@style/ActionPill" android:layout_width="0dp" android:layout_weight="1" android:text="SMS" />
-            <TextView android:id="@+id/action_pay" style="@style/ActionPill" android:layout_width="0dp" android:layout_weight="1" android:text="Payment" />
-            <TextView android:id="@+id/action_invoice" style="@style/ActionPill" android:layout_width="0dp" android:layout_weight="1" android:text="Invoice" />
+            <TextView android:id="@+id/action_call" style="@style/ActionPill" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Call" />
+            <TextView android:id="@+id/action_whatsapp" style="@style/ActionPill" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SMS" />
+            <TextView android:id="@+id/action_pay" style="@style/ActionPill" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Payment" />
+            <TextView android:id="@+id/action_invoice" style="@style/ActionPill" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Invoice" />
         </LinearLayout>
 
         <!-- Ledger -->
@@ -170,6 +170,6 @@
                 android:visibility="gone" />
         </LinearLayout>
 
-        <View android:layout_height="20dp" />
+        <View android:layout_width="match_parent" android:layout_height="20dp" />
     </LinearLayout>
 </ScrollView>

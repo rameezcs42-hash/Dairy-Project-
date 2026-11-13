@@ -49,7 +49,7 @@
             <include layout="@layout/report_tile" android:id="@+id/tile_outstanding" />
             <include layout="@layout/report_tile" android:id="@+id/tile_pnl" />
             <include layout="@layout/report_tile" android:id="@+id/tile_rates" />
-            <View android:layout_height="12dp" />
+            <View android:layout_width="match_parent" android:layout_height="12dp" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -5,6 +5,7 @@
 # Usage: TOOLCHAIN=/path/to/toolchain ./tools/build_apk.sh
 set -euo pipefail
 
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 TOOLCHAIN="${TOOLCHAIN:-/home/user/toolchain}"
 ANDROID_JAR="$TOOLCHAIN/sdk/android-30/public/android.jar"
 LAMBDA_STUBS="$TOOLCHAIN/sdk/tools/linux/bin/core-lambda-stubs.jar"
@@ -13,11 +14,10 @@ D8_JAR="$TOOLCHAIN/sdk/tools/linux/lib/d8.jar"
 APKSIGNER="$TOOLCHAIN/sdk/tools/linux/lib/apksigner.jar"
 ZIPALIGN="$TOOLCHAIN/sdk/tools/linux/bin/zipalign"
 ECJ="$TOOLCHAIN/ecj/ecj-4.6.1.jar"
-JAVA_BIN="${JAVA_BIN:-$TOOLCHAIN/jdk4py/jdk4py/java-runtime/bin/java}"
-KEYSTORE="${KEYSTORE:-$TOOLCHAIN/dairyflow-debug.keystore}"
+JAVA_BIN="${JAVA_BIN:-$TOOLCHAIN/jdk4py-src/jdk4py/java-runtime/bin/java}"
+KEYSTORE="${KEYSTORE:-$ROOT/tools/dairyflow-debug.keystore}"
 KS_PASS="${KS_PASS:-dairyflow}"
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 BUILD="$ROOT/build"
 SRC_MAIN="$ROOT/app/src/main"
 

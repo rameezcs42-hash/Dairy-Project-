@@ -132,7 +132,7 @@
                 android:layout_marginEnd="6dp">
 
                 <include layout="@layout/stat_card" android:id="@+id/stat_litres" />
-                <Space android:layout_height="10dp" />
+                <Space android:layout_width="match_parent" android:layout_height="10dp" />
                 <include layout="@layout/stat_card" android:id="@+id/stat_sales" />
             </LinearLayout>
 
@@ -144,7 +144,7 @@
                 android:layout_marginStart="6dp">
 
                 <include layout="@layout/stat_card" android:id="@+id/stat_payments" />
-                <Space android:layout_height="10dp" />
+                <Space android:layout_width="match_parent" android:layout_height="10dp" />
                 <include layout="@layout/stat_card" android:id="@+id/stat_stock" />
             </LinearLayout>
         </LinearLayout>
