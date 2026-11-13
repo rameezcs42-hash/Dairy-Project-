@@ -54,7 +54,8 @@ public class ReportDetailActivity extends Activity {
     private String day = Format.todayIso();       // daily
     private String month = Format.currentMonth(); // monthly / customers / pnl
 
-    private TextView reportTitle, reportPeriod, reportSummary, reportNext, reportPrev;
+    private TextView reportTitle, reportPeriod, reportSummary;
+    private View reportNext, reportPrev;
     private ListView list;
 
     private final List<String[]> rows = new ArrayList<>();
